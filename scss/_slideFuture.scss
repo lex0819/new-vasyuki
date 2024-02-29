@@ -1,0 +1,85 @@
+.future {
+    &__content {
+        position: relative;
+    }
+
+    &__swiper {
+
+        @media (max-width: 767px) {
+            display: flex;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+        }
+
+        &-control {
+            display: none;
+            transform: translateY(28px);
+
+            @media(max-width: 767px) {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+            }
+        }
+
+        &-button-prev,
+        &-button-next {
+            cursor: pointer;
+            height: 44px;
+
+            &:hover circle {
+                fill: $color-btn-hover;
+            }
+
+            &.swiper-button-disabled circle {
+                fill: $color-btn-disabled;
+            }
+        }
+
+        &-pagination {
+            text-align: center;
+            transition: 0.3s opacity;
+            transform: translate3d(0, 0, 0);
+
+            &>.swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $color-btn-disabled;
+            }
+
+            &>.swiper-pagination-bullet-active {
+                background-color: $color-dark;
+            }
+        }
+
+        &-wrapper {
+
+            @media (max-width: 767px) {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 0;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                z-index: 1;
+                box-sizing: content-box;
+            }
+        }
+
+        &-slide {
+
+            @media(max-width: 767px) {
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+.future__swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    width: auto;
+}

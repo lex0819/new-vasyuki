@@ -1,0 +1,91 @@
+.gamers {
+    &__content {
+        max-width: 1222px;
+        margin: 0 auto;
+        position: relative;
+
+        @media (max-width: 1023px) {
+            max-width: 808px;
+        }
+
+        @media (max-width: 767px) {
+            max-width: 394px;
+        }
+    }
+
+    &__swiper {
+        display: flex;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+
+        &-wrapper {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 0;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+            box-sizing: content-box;
+        }
+
+        &-slide {
+            flex-shrink: 0;
+        }
+
+        &-control {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-end;
+            align-items: center;
+
+            &__bottom {
+                justify-content: center;
+                margin-top: 40px;
+                margin-bottom: 0;
+            }
+        }
+
+        &-button-prev,
+        &-button-next {
+            cursor: pointer;
+            height: 44px;
+
+            &:hover circle {
+                fill: $color-btn-hover;
+            }
+
+            &.swiper-button-disabled circle {
+                fill: $color-btn-disabled;
+            }
+        }
+
+        &-pagination {
+            // position: static;
+
+            &-current {
+                font-family: $font-family;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.2;
+                color: $color-dark;
+                opacity: 1;
+            }
+
+            &-total {
+                font-family: $font-family;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.2;
+                color: $color-dark;
+                opacity: 0.6;
+            }
+        }
+    }
+}
+
+.gamers__swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal {
+    width: auto;
+}

@@ -1,0 +1,48 @@
+%h2-model {
+    font-family: $second-family;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $color-dark;
+}
+
+@mixin h2-title {
+    @extend %h2-model;
+    font-size: 36px;
+    line-height: 1.35;
+
+    &_line {
+        display: inline;
+    }
+
+    &>span {
+        font-weight: 700;
+        color: $color-bg-run;
+    }
+
+    @media (max-width: 1023px) {
+        font-size: 28px;
+    }
+}
+
+@mixin h2-big {
+    @extend %h2-model;
+    font-size: 54px;
+    line-height: 1.2;
+
+    @media (max-width: 767px) {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+}
+
+@mixin info($font-weight, $opacity) {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $color-dark;
+    opacity: $opacity;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+}

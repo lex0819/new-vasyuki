@@ -1,0 +1,13 @@
+.logo {
+    &>svg {
+        width: 245px;
+        height: 36px;
+    }
+
+    &>svg {
+        @media(max-width: 1023px) {
+            width: 213px;
+            height: 27px;
+        }
+    }
+}

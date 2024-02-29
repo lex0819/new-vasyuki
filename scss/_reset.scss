@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    font-family: inherit;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+}

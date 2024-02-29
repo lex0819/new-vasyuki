@@ -1,0 +1,28 @@
+body {
+    font-family: $font-family;
+    /* Set "counter" to 0 */
+    counter-reset: counter;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    @media(max-width: 1366px) {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    @media(max-width: 1023px) {
+        max-width: 100%;
+    }
+
+    @media(max-width: 425px) {
+        max-width: 100%;
+        padding: 0;
+    }
+}

@@ -1,0 +1,13 @@
+.running-line {
+  display: block;
+  width: 100vw;
+  height: 60px;
+  background-color: $color-bg-run;
+  color: $color-superlight;
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 60px;
+  text-transform: uppercase;
+  text-align: right;
+}
